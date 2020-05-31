@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "parcel source/index.html",
     "format": "prettier \"source/**/*.{js,html}\" --write",
     "lint": "eslint \"source/**/*.{js,jsx}\" --quiet",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,6 +15,11 @@
   "devDependencies": {
     "eslint": "^7.1.0",
     "eslint-config-prettier": "^6.11.0",
+    "parcel-bundler": "^1.12.4",
     "prettier": "^2.0.5"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }
