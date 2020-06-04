@@ -1,10 +1,15 @@
 {
+  "homepage": "http://sanjana-302.github.io/Adopt-a-pet",
   "name": "adopt_me",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "parcel source/index.html",
+    "build": "parcel build source/index.html",
+    "dev:mock": "cross-env PET_MOCK=mock parcel source/index.html",
     "format": "prettier \"source/**/*.{js,html}\" --write",
     "lint": "eslint \"source/**/*.{js,jsx}\" --quiet",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,13 +18,31 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/plugin-proposal-class-properties": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
+    "babel-eslint": "^10.1.0",
+    "cross-env": "^7.0.2",
     "eslint": "^7.1.0",
     "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4.0.4",
+    "gh-pages": "^3.0.0",
     "parcel-bundler": "^1.12.4",
     "prettier": "^2.0.5"
   },
   "dependencies": {
+    "@frontendmasters/pet": "^1.0.3",
+    "@reach/router": "^1.3.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
-  }
+  },
+  "browserslist": [
+    "last 2 Chrome versions",
+    "last 2 Firefox versions",
+    "last 2 Edge versions"
+  ]
 }
